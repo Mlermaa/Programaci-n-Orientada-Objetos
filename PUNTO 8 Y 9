@@ -1,0 +1,50 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+/* 8. En un hospital existen tres áreas: Ginecología, Pediatría, Traumatologia. El presupuesto
+   	  anual del hospital se reparte conforme a la sig. tabla:
+   
+		Área 				    Porcentaje del presupuesto
+		Ginecología		      40%
+		Traumatologia       30%
+		Pediatría           30%
+		
+	9. Obtener la cantidad de dinero que recibirá cada área, para cualquier monto presupuestal.
+	*/
+struct presupuesto{
+	
+	int presupuestoAnual = 0;
+	int ginecologia = 40;
+	int traumatologia = 30;
+	int pediatria = 30;
+	
+	int calculoginecologia = 0;
+	int calculotraumatologia = 0;
+	int calculopediatria = 0;
+	
+	int SumaPresupuesto = 0;	
+};
+	
+int main(){
+	
+	presupuesto presupuesto1;
+	
+	cout<<"Ingrese el Presupuesto Anual: ";
+	cin>>presupuesto1.presupuestoAnual;
+	
+	presupuesto1.calculoginecologia = (presupuesto1.presupuestoAnual/100)*presupuesto1.ginecologia;
+	presupuesto1.calculotraumatologia= (presupuesto1.presupuestoAnual/100)*presupuesto1.traumatologia;
+	presupuesto1.calculopediatria = (presupuesto1.presupuestoAnual/100)*presupuesto1.pediatria;
+	
+	presupuesto1.SumaPresupuesto = presupuesto1.calculoginecologia+presupuesto1.calculotraumatologia+presupuesto1.calculopediatria;
+	
+	cout<<"El presupuesto para Ginecologia es del: "<<presupuesto1.ginecologia<<"%  = $"<<presupuesto1.calculoginecologia<<endl;
+	cout<<"El presupuesto para Traumatologia es del: "<<presupuesto1.traumatologia<<"%  = $"<<presupuesto1.calculotraumatologia<<endl;
+	cout<<"El presupuesto para Pediatria es del: "<<presupuesto1.pediatria<<"%  = $"<<presupuesto1.calculopediatria<<endl;
+	
+	cout<<"Total Presupuesto: $"<<presupuesto1.SumaPresupuesto;
+
+	return 0;
+}

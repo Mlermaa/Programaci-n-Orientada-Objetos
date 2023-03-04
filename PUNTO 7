@@ -1,0 +1,37 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+//7. Dada una cantidad en pesos, obtener la equivalencia en dólares, asumiendo que la unidad cambiaría es un dato desconocido.
+
+struct conversion_peso{
+		
+	float dolar = 0;
+	int CantidadPesos = 0;
+	int CalculoPeso_Dolar = 0;
+	
+};
+
+
+int main(){
+	
+conversion_peso  conversion1;
+
+cout<<"Ingrese el valor del Dolar como unidad minima (Ejemplo: 0,00020) ";
+cin>>conversion1.dolar;
+
+cout<<"Ingrese la Cantidad de Pesos a convertir: ";
+cin>>conversion1.CantidadPesos;
+
+conversion1.CalculoPeso_Dolar = conversion1.CantidadPesos*conversion1.dolar;
+
+
+cout<<"Comvertir: "<<conversion1.CantidadPesos<<" pesos "<<endl;
+cout<<"Unidad de conversion en Dolares "<<conversion1.dolar<<endl;
+
+cout<<"Obtendras entonces: "<<conversion1.CalculoPeso_Dolar<<" Dolares";
+
+
+	return 0;
+}

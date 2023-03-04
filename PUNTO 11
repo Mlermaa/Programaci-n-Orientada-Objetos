@@ -1,0 +1,44 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+/*
+	11. Tres personas deciden invertir su dinero para fundar una empresa. Cada una de ellas invierte
+	una cantidad distinta. Obtener el porcentaje que cada quien invierte con respecto a la cantidad
+	total invertida
+
+*/
+
+	struct inversion{
+		
+	int inversion1,inversion2,inversion3 = 0;
+	int sumaInversiones = 0;
+	float Porc_Inversion1,Porc_Inversion2,Porc_Inversion3 = 0;	
+		
+	};
+
+	int main(){
+	
+	inversion nuevainveresion1;
+
+
+	cout<<"Ingrese los montos a invetir: \n";
+	cin>>nuevainveresion1.inversion1;
+	cin>>nuevainveresion1.inversion2;
+	cin>>nuevainveresion1.inversion3;
+	
+	
+	nuevainveresion1.sumaInversiones = nuevainveresion1.inversion1+nuevainveresion1.inversion2+nuevainveresion1.inversion3;
+	
+	nuevainveresion1.Porc_Inversion1 = (nuevainveresion1.inversion1*100)/nuevainveresion1.sumaInversiones;
+	nuevainveresion1.Porc_Inversion2 = (nuevainveresion1.inversion2*100)/nuevainveresion1.sumaInversiones;
+	nuevainveresion1.Porc_Inversion3 = (nuevainveresion1.inversion3*100)/nuevainveresion1.sumaInversiones;
+	
+	cout<<"El Total de las tres inversiones representa el 100% por valor de: $"<<nuevainveresion1.sumaInversiones<<endl<<endl;
+	cout<<"La primer inversion es $"<<nuevainveresion1.inversion1<<" con un "<<nuevainveresion1.Porc_Inversion1<<"% de representacion"<<endl;
+	cout<<"La primer inversion es $"<<nuevainveresion1.inversion2<<" con un "<<nuevainveresion1.Porc_Inversion2<<"% de representacion"<<endl;
+	cout<<"La primer inversion es $"<<nuevainveresion1.inversion3<<" con un "<<nuevainveresion1.Porc_Inversion3<<"% de representacion"<<endl;
+
+	return 0;
+}

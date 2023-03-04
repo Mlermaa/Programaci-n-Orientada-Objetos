@@ -1,0 +1,32 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+/* 6. Realizar un algoritmo que calcule la edad de una persona.*/
+
+
+struct edadpersona{
+	
+	int anoNacimiento = 0;
+	int anoActual = 0;
+	int Edad = 0;
+	
+};
+
+int main(){
+
+	edadpersona persona1;	
+
+	cout<<"Ingrese el Año de nacimiento: ";
+	cin>>persona1.anoNacimiento;
+	
+	cout<<"Ahora ingrese al año Actual: ";
+	cin>>persona1.anoActual;
+	
+	persona1.Edad = (persona1.anoActual-1)-persona1.anoNacimiento;
+	
+	cout<<"Su edad a la fecha es de: "<<persona1.Edad; 
+
+	return 0;
+}
